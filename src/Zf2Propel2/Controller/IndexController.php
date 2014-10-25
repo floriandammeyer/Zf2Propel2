@@ -31,7 +31,7 @@ class IndexController
         ];
         file_put_contents("propel.php.dist", '<?php return ' . var_export($db_config, true) . ';');
 
-        exec('php ../../../propel/propel/bin/propel.php ' . $script, $output);
+        exec('php ../../../../propel/propel/bin/propel.php ' . $script, $output);
 
         // Delete the created propel.php.dist file
         unlink("propel.php.dist");

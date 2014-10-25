@@ -1,7 +1,7 @@
 {
 	"name": "floriandammeyer/zf2propel2",
 	"type": "library",
-	"version": "0.9",
+	"version": "0.9.1",
 	"description": "Propel2 integration module for Zend Framework 2",
 	"keywords": [
 		"ORM",
