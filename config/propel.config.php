@@ -1,4 +1,7 @@
 <?php
+/**
+ * This file is being copied to <project-root>/data/zf2propel2 when executing a Propel command
+ */
 return [
     'propel' => [
         'database' => [

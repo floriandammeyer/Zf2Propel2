@@ -13,7 +13,18 @@ class IndexController
         $config = $this->getServiceLocator()->get('config')["database"];
 
         $src_dir = getcwd();
-        chdir(__DIR__ . '/../../../data/propel');
+        $wd = __DIR__ . '/../../../../../../data/zf2propel2';
+        if(!file_exists($wd))
+        {
+            mkdir(wd);
+        }
+        chdir($wd);
+
+        // Copy the Propel config file
+        if(!copy(__DIR__ . '/../../../config/propel.config.php', 'propel.php.dist'))
+        {
+            die("Could not copy the Propel configuration file")
+        }
 
         // Dynamically create a propel.php.dist config file with the database config
         $db_config = [
@@ -31,10 +42,10 @@ class IndexController
         ];
         file_put_contents("propel.php", '<?php return ' . var_export($db_config, true) . ';');
 
-        exec('php ../../../../propel/propel/bin/propel.php ' . $script, $output);
+        exec('php ../../vendor/propel/propel/bin/propel.php ' . $script, $output);
 
-        // Delete the created propel.php.dist file
-        unlink("propel.php.dist");
+        // Delete the created propel.php file
+        unlink("propel.php");
 
         foreach($output as $line)
         {
