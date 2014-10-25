@@ -23,7 +23,8 @@ return [
             'schemaDir' => realpath(__DIR__ . '/../../../../config/model'),
             'phpDir' => realpath(__DIR__ . '/../../../../module'),
             'phpConfDir' => realpath(__DIR__ . '/../../../../config/propel'),
-            'sqlDir' => realpath(__DIR__ . '/../../../../sql')
+            'sqlDir' => realpath(__DIR__ . '/../../../../sql'),
+            'outputDir' => realpath(__DIR__ . '/../../../../propel')
         ],
         'generator' => [
             'defaultConnection' => 'default',
