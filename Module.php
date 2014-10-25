@@ -73,6 +73,12 @@ class Module
                 'dsn'      => 'mysql:host=' . $db_config['host'] . ';dbname=' . $db_config['database'],
                 'user'     => $db_config['username'],
                 'password' => $db_config['password'],
+                'settings' => [
+                    'charset' => 'utf8',
+                    'queries' => [
+                        'utf8' => "SET NAMES utf8;"
+                    ]
+                ],
             ));
             $serviceContainer->setConnectionManager('default', $manager);
         }
