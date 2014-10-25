@@ -16,14 +16,14 @@ class IndexController
         $wd = __DIR__ . '/../../../../../../data/zf2propel2';
         if(!file_exists($wd))
         {
-            mkdir(wd);
+            mkdir($wd, 0777, true);
         }
         chdir($wd);
 
         // Copy the Propel config file
         if(!copy(__DIR__ . '/../../../config/propel.config.php', 'propel.php.dist'))
         {
-            die("Could not copy the Propel configuration file")
+            die("Could not copy the Propel configuration file");
         }
 
         // Dynamically create a propel.php.dist config file with the database config
