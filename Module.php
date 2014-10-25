@@ -63,9 +63,21 @@ class Module
 
         if(!$e->getRequest() instanceof ConsoleRequest)
         {
-            // TODO: database-config laden
-            $app = $e->getApplication();
-            $db_config = $app->getServiceManager()->get('ApplicationConfiguration')->get('database');
+            $config = $this->getServiceLocator()->get('config')["database"];
+
+            $db_config = [
+                'propel' => [
+                    'database' => [
+                        'connections' => [
+                            'default' => [
+                                'dsn'        => 'mysql:host=' . $config['host'] . ';dbname=' . $config['database'],
+                                'user'       => $config['username'],
+                                'password'   => $config['password'],
+                            ]
+                        ]
+                    ]
+                ]
+            ];
 
             // Set up Propel2 default connection
             $serviceContainer = Propel::getServiceContainer();
