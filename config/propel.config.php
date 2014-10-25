@@ -24,10 +24,10 @@ return [
         ],
         // TODO: does propel always use the cwd as the output dir for migrations or which of the paths affects the diff task?
         'paths' => [
-            'schemaDir' => realpath(__DIR__ . '/../../../../../config/model'),
-            'phpDir' => realpath(__DIR__ . '/../../../../../module'),
-            'phpConfDir' => realpath(__DIR__ . '/../../../../../config/propel'),
-            'sqlDir' => realpath(__DIR__ . '/../sql'),
+            'schemaDir' => realpath(__DIR__ . '/../../config/model'),
+            'phpConfDir' => realpath(__DIR__ . '/../../config/propel'),
+            'phpDir' => realpath(__DIR__ . '/../../module'),
+            'sqlDir' => realpath(__DIR__ . '/sql'),
         ],
         'generator' => [
             'defaultConnection' => 'default',
