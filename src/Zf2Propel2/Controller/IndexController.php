@@ -13,7 +13,7 @@ class IndexController
         $config = $this->getServiceLocator()->get('config')["database"];
 
         $src_dir = getcwd();
-        chdir(__DIR__ . '/../../../config');
+        chdir(__DIR__ . '/../../../data/propel');
 
         // Dynamically create a propel.php.dist config file with the database config
         $db_config = [
