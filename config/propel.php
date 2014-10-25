@@ -35,8 +35,15 @@ return [
             'objectModel' => [
                 // We need to use our own builders to change the path mappings
                 'builders' => [
-                    'object' => '\Zf2Propel2\Generator\Builder\Om\ObjectBuilder'
-                ]
+                    'object' => '\Zf2Propel2\Generator\Builder\Om\ObjectBuilder',
+                    'objectstub' => '\Zf2Propel2\Generator\Builder\Om\ExtensionObjectBuilder',
+                    'objectmultiextend' => '\Zf2Propel2\Generator\Builder\Om\MultiExtendObjectBuilder',
+                    'tablemap' => '\Zf2Propel2\Generator\Builder\Om\TableMapBuilder',
+                    'query' => '\Zf2Propel2\Generator\Builder\Om\QueryBuilder',
+                    'querystub' => '\Zf2Propel2\Generator\Builder\Om\ExtensionQueryBuilder',
+                    'queryinheritance' => '\Zf2Propel2\Generator\Builder\Om\QueryInheritanceBuilder',
+                    'queryinheritancestub' => '\Zf2Propel2\Generator\Builder\Om\ExtensionQueryInheritanceBuilder'
+                ],
             ]
         ],
         'runtime' => [
