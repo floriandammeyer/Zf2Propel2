@@ -25,6 +25,9 @@
 	"autoload": {
 		"psr-0": {
 			"Zf2Propel2": "src/"
-		}
+		},
+		"classmap": [
+			"./Module.php"
+		]
 	}
 }
