@@ -8,8 +8,10 @@ class ObjectBuilder
     public function getClassFilePath()
     {
         $path = parent::getClassFilePath();
-        file_put_contents("my_build_log.txt", file_get_contents("my_build_log.txt") . "\n" . $path);
 
-        return $path;
+        // extract the first part of the class path because this is the module name
+        $module_name = explode('/', $path)[0];
+
+        return $module_name . "/src/" . $path;
     }
 }

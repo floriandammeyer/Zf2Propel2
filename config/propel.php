@@ -20,10 +20,10 @@ return [
             ]
         ],
         'paths' => [
-            'schemaDir' => realpath(__DIR__ . '/../../../config/model'),
-            'phpDir' => realpath(__DIR__ . '/../..'),
-            'phpConfDir' => realpath(__DIR__ . '/../../../config/propel'),
-            'sqlDir' => realpath(__DIR__ . '/../../../sql')
+            'schemaDir' => realpath(__DIR__ . '/../../../../config/model'),
+            'phpDir' => realpath(__DIR__ . '/../../../../module'),
+            'phpConfDir' => realpath(__DIR__ . '/../../../../config/propel'),
+            'sqlDir' => realpath(__DIR__ . '/../../../../sql')
         ],
         'generator' => [
             'defaultConnection' => 'default',

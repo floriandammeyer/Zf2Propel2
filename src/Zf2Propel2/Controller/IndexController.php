@@ -1,8 +1,6 @@
 <?php
 namespace Zf2Propel2\Controller;
 
-// todo: propel-commandos entgegennehmen und mit entsprechenden propel-configs umgeleitet aufrufen, damit propel models etc. gebuildet werden
-
 use Zend\Mvc\Controller\AbstractActionController;
 
 class IndexController
@@ -33,8 +31,9 @@ class IndexController
         ];
         file_put_contents("propel.php.dist", '<?php return ' . var_export($db_config, true) . ';');
 
-        exec('php ../../../vendor/propel/propel/bin/propel.php ' . $script, $output);
+        exec('php ../../../propel/propel/bin/propel.php ' . $script, $output);
 
+        // Delete the created propel.php.dist file
         unlink("propel.php.dist");
 
         foreach($output as $line)
@@ -43,5 +42,7 @@ class IndexController
         }
 
         chdir($src_dir);
+
+        return array();
     }
 }
