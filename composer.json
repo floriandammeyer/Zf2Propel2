@@ -1,0 +1,30 @@
+{
+	"name": "floriandammeyer/Zf2Propel2",
+	"type": "library",
+	"version": "0.1",
+	"description": "Propel2 integration module for Zend Framework 2",
+	"keywords": [
+		"ORM",
+		"persistence",
+		"Active Record",
+		"Zend Framework 2",
+		"Propel 2"
+	],
+	"homepage": "",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Florian Dammeyer",
+			"email": "florian.dammeyer@gmail.com"
+		}
+	],
+	"require": {
+		"zendframework/zendframework": "~2",
+		"propel/propel": "~2.0@dev"
+	},
+	"autoload": {
+		"psr-0": {
+			"Zf2Propel2": "src/"
+		}
+	}
+}
