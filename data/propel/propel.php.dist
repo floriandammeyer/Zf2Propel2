@@ -30,9 +30,6 @@ return [
             'defaultConnection' => 'default',
             'connections' => ['default'],
             'namespaceAutoPackage' => true,
-            'schema' => [
-                'basename' => 'debugschema'
-            ],
             'objectModel' => [
                 // We need to use our own builders to change the path mappings
                 'builders' => [
