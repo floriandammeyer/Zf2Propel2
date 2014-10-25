@@ -63,7 +63,7 @@ class Module
 
         if(!$e->getRequest() instanceof ConsoleRequest)
         {
-            $config = $this->getServiceLocator()->get('config')["database"];
+            $config = $e->getApplication()->getConfig()["database"];
 
             $db_config = [
                 'propel' => [
