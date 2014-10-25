@@ -1,5 +1,5 @@
 {
-	"name": "floriandammeyer/Zf2Propel2",
+	"name": "floriandammeyer/zf2propel2",
 	"type": "library",
 	"version": "0.1",
 	"description": "Propel2 integration module for Zend Framework 2",
