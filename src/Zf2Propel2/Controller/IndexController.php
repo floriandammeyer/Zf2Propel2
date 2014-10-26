@@ -20,6 +20,13 @@ class IndexController
         }
         chdir($wd);
 
+        // Propel does not automatically create this directory,
+        // so we have to create it manually before running propel
+        if(!file_exists("./sql"))
+        {
+            mkdir("./sql", 0777);
+        }
+
         // Copy the Propel config file
         if(!copy(__DIR__ . '/../../../config/propel.config.php', 'propel.php.dist'))
         {
