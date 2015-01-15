@@ -20,4 +20,9 @@ return array(
             'propel_orm-controller-index' => 'Zf2Propel2\Controller\IndexController',
         ),
     ),
+	'service_manager' => array(
+		'abstract_factories' => array(
+			'Zf2Propel2\AbstractFactory'
+		)
+	),
 );
