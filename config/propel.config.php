@@ -34,7 +34,8 @@ return [
             'connections' => ['default'],
             'namespaceAutoPackage' => true,
             'objectModel' => [
-                'disableIdentifierQuoting' => false,
+                // TODO: error 'unrecognized option disableIdentifierQuoting'??
+//                'disableIdentifierQuoting' => false,
                 // We need to use our own builders to change the path mappings
                 'builders' => [
                     'object' => '\Zf2Propel2\Generator\Builder\Om\ObjectBuilder',
